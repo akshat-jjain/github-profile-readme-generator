@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:focus {
+    outline: #fff;
+}
+
+.container {
+    padding: 5%;
+    margin: 2%;
+}
+
+strong.required {
+    color: #f00;
+    text-decoration: underline;
+}
+
+.required input[required]:invalid {
+    border-bottom: 2px solid #f00;
+}
+
+input[required]:invalid {
+    border-bottom: 2px solid #f00;
+}
+
+input[required]:valid {
+    border-bottom: 2px solid #0f0;
+}
+
+.required input[required]:valid {
+    border-bottom: 2px solid #0f0;
+}
+
+.required-block {
+    text-align: center;
+}
+
+.field,
+.prefix-field,
+.social-username {
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.none {
+    display: none;
+}
+.field{
+    width: 50%;
+}
+.field,
+.prefix-field {
+    margin: 1%;
+    padding: 1%;
+}
+
+.add-ons label {
+    margin: 1%;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.social-icon {
+    width: 30px;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.social-sub-block {
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 1%;
+}
+
+.block,
+.sub-block {
+    padding: 2%;
+}
+
+.search {
+    float: right;
+}
+
+#generate {
+    text-align: center;
+}
+
+.support {
+    width: 60%;
+
+}
+
+img {
+    vertical-align: middle;
+}
+
+.support-img {
+    width: 8rem;
+}
+
+.generate {
+    width: 25%;
+    padding: 2%;
+    border: 2px solid rgba(26, 32, 44, 1);
+    background: rgba(247, 250, 252, 1);
+    cursor: pointer;
+}
