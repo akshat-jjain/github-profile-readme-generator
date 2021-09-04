@@ -45,7 +45,7 @@
 <p align="center">
 <a href="https://www.paypal.me/rahuldkjain"><img src="https://img.shields.io/badge/support-PayPal-blue?logo=PayPal&style=flat-square&label=Donate" alt="sponsor github profile readme generator"/>
 </a>
-<a href='https://ko-fi.com/A0A81XXSX' target='_blank'><img height='23' width="100" src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' alt='Buy Coffee for rahuldkjain' />
+<a href='https://ko-fi.com/akshatjain' target='_blank'><img height='23' width="100" src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' alt='Buy Coffee for Akshat Jain' />
 </a>
 <a href="https://www.buymeacoffee.com/akshatjain" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="23" width="100" style="border-radius:1px" />
 </p>
