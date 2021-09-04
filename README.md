@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://rahuldkjain.github.io/gh-profile-readme-generator">
+  <a href="https://akshat-jjain.github.io/github-profile-readme-generator">
     <img alt="GitHub Profile Readme Generator" src="./src/images/mdg.png" width="60" />
   </a>
 </p>
@@ -8,20 +8,20 @@
 </h1>
 
 <p align="center">
-<a href="https://github.com/rahuldkjain/github-profile-readme-generator/blob/master/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/rahuldkjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator license" />
+<a href="https://github.com/akshat-jjain/github-profile-readme-generator/blob/master/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/akshat-jjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator license" />
 </a>
-<a href="https://github.com/rahuldkjain/github-profile-readme-generator/fork" target="blank">
-<img src="https://img.shields.io/github/forks/rahuldkjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator forks"/>
+<a href="https://github.com/akshat-jjain/github-profile-readme-generator/fork" target="blank">
+<img src="https://img.shields.io/github/forks/aksaht-jjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator forks"/>
 </a>
-<a href="https://github.com/rahuldkjain/github-profile-readme-generator/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/rahuldkjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator stars"/>
+<a href="https://github.com/akshat-jjain/github-profile-readme-generator/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/akshat-jjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator stars"/>
 </a>
-<a href="https://github.com/rahuldkjain/github-profile-readme-generator/issues" target="blank">
-<img src="https://img.shields.io/github/issues/rahuldkjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator issues"/>
+<a href="https://github.com/akshat-jjain/github-profile-readme-generator/issues" target="blank">
+<img src="https://img.shields.io/github/issues/akshat-jjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator issues"/>
 </a>
-<a href="https://github.com/rahuldkjain/github-profile-readme-generator/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/rahuldkjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator pull-requests"/>
+<a href="https://github.com/akshat-jjain/github-profile-readme-generator/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/akshat-jjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator pull-requests"/>
 </a>
 <a href="https://discord.gg/HHMs7Eg" target="blank">
 <img src="https://img.shields.io/discord/735303195105951764?label=Join%20Community&logo=discord&style=flat-square" alt="join discord community of github profile readme generator"/>
@@ -47,7 +47,7 @@
 </a>
 <a href='https://ko-fi.com/A0A81XXSX' target='_blank'><img height='23' width="100" src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' alt='Buy Coffee for rahuldkjain' />
 </a>
-<a href="https://www.buymeacoffee.com/rahuldkjain" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="23" width="100" style="border-radius:1px" />
+<a href="https://www.buymeacoffee.com/akshatjain" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="23" width="100" style="border-radius:1px" />
 </p>
 
 #### Tired of editing GitHub Profile README with new features?
@@ -153,14 +153,14 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 <a href="https://www.paypal.me/rahuldkjain/10"><img src="https://ionicabizau.github.io/badges/paypal.svg" alt="sponsor github profile readme generator"/>
 </a>
 <a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Frahuldkjain.github.io%2Fgithub-profile-readme-generator">
-<img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Frahuldkjain.github.io%2Fgithub-profile-readme-generator" alt="tweet github profile readme generator"/>
+<img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fakshat-jjain.github.io%2Fgithub-profile-readme-generator" alt="tweet github profile readme generator"/>
 </a>
 </p>
 
 <p align="left">
   <a href='https://ko-fi.com/A0A81XXSX' target='_blank'><img height='23' width="100" src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' alt='Buy Coffee for rahuldkjain' />
   </a>
-  <a href="https://www.buymeacoffee.com/rahuldkjain" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="23" width="100" style="border-radius:2px" />
+  <a href="https://www.buymeacoffee.com/akshatjain" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="23" width="100" style="border-radius:2px" />
 </p>
 
 
