@@ -11,703 +11,751 @@
 
     <body>
         <div class="container">
-            <div class="required-block">
-                Required fields are <strong class="required">RED</strong> color underlined
-            </div>
-            <div class="block required title">
-                <h2>Title</h2>
-                <input type="text" name="title-prefix" value="Hi 👋, I'm" id="title-prefix" class="prefix-field" />
-                <input type="text" name="title" id="title" class="field" value="Akshat Jain" placeholder="name"
-                    required />
-            </div>
-            <div class="block required subtitle">
-                <h2>Subtitle</h2>
-                <input type="text" name="subtitle" id="subtitle" class="field"
-                    value="A passionate frontend developer from India" required />
-            </div>
-            <div class="block header-images">
-                <h2>Header Images</h2>
-                <div class="sub-block">
-                    <h3>Banner Image</h3>
-                    <input type="text" class="field" name="banner-image" id="banner-image"
-                        value="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg"
-                        oninput="$id('banner-img').src = this.value">
-                    <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg" alt="banner image"
-                        id="banner-img" width="100%" height="250px">
-                    <h3>About Banner Image</h3>
-                    <input type="text" class="field" name="about-image" id="about-image"
-                        value="https://raw.githubusercontent.com/onimur/.github/master/.resources/git-header.svg"
-                        oninput="$id('about-img').src = this.value"><br>
-                    <img src="https://raw.githubusercontent.com/onimur/.github/master/.resources/git-header.svg"
-                        alt="about image" id="about-img" width="55%">
+            <div class="edit-area" id="edit-area">
+                <div class="tab">
+                    <button class="tablinks" onclick="showTab(event, 'first')" id="personal-data">Personal Data</button>
+                    <button class="tablinks" onclick="showTab(event, 'second')" id="work-data">Work Data</button>
+                    <button class="tablinks" onclick="showTab(event, 'third')" id="skill-data">Skills Data</button>
+                    <button class="tablinks" onclick="showTab(event, 'fourth')" id="additional-data">Additional
+                        Data</button>
                 </div>
-            </div>
-            <div class="block work">
-                <h2>Work</h2>
-                <div class="sub-block">
-                    <input type="text" name="currently-work-prefix" id="currently-work-prefix" class="prefix-field"
-                        value="🔭 I’m currently working on" placeholder="Hi 👋, I'm" />
-                    <input type="text" name="currently-work" id="currently-work" class="field"
-                        value="My Blog, Github Project" placeholder="project name" />
-                    <input type="url" name="current-project-link" id="current-project-link" class="field" value=""
-                        placeholder="project link" />
-                    <br />
+                <br>
+                <div class="required-block">
+                    Required fields are <strong class="required">RED</strong> color underlined
                 </div>
-                <div class="sub-block">
-                    <input type="text" name="looking-to-prefix" id="looking-to-prefix" class="prefix-field"
-                        value="👯 I’m looking to collaborate on" />
-                    <input type="text" name="looking-to" id="looking-to" class="field" value="Projects,Tech Articles" />
-                    <input type="url" name="looking-to-link" id="current-project-link" class="field" value="" />
-                    <br />
+                <div class="first content" id="first">
+                    <div class="block required title">
+                        <h2>Title</h2>
+                        <input type="text" name="title-prefix" value="Hi 👋, I'm" id="title-prefix"
+                            class="prefix-field" />
+                        <input type="text" name="title" id="title" class="field" value="Akshat Jain" placeholder="name"
+                            required />
+                    </div>
+                    <div class="block required subtitle">
+                        <h2>Subtitle</h2>
+                        <input type="text" name="subtitle" id="subtitle" class="field"
+                            value="A passionate frontend developer from India" required />
+                    </div>
+                    <div class="block header-images">
+                        <h2>Header Images</h2>
+                        <div class="sub-block">
+                            <h3>Banner Image</h3>
+                            <input type="text" class="field" name="banner-image" id="banner-image"
+                                value="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg"
+                                oninput="$id('banner-img').src = this.value">
+                            <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg"
+                                alt="banner image" id="banner-img" width="100%" height="250px">
+                            <h3>About Banner Image</h3>
+                            <input type="text" class="field" name="about-image" id="about-image"
+                                value="https://raw.githubusercontent.com/onimur/.github/master/.resources/git-header.svg"
+                                oninput="$id('about-img').src = this.value"><br>
+                            <img src="https://raw.githubusercontent.com/onimur/.github/master/.resources/git-header.svg"
+                                alt="about image" id="about-img" width="55%">
+                        </div>
+                    </div>
                 </div>
-                <div class="sub-block">
-                    <input type="text" name="looking-for-prefix" id="looking-for-prefix" class="prefix-field"
-                        value="🤝 I’m looking for help with" />
-                    <input type="text" name="looking-for" id="looking-for" class="field" value="" />
-                    <input type="url" name="current-project-link" id="current-project-link" class="field" value="" />
-                    <br />
+                <div class="second content" id="second">
+                    <div class="block work">
+                        <h2>Work</h2>
+                        <div class="sub-block">
+                            <input type="text" name="currently-work-prefix" id="currently-work-prefix"
+                                class="prefix-field" value="🔭 I’m currently working on" placeholder="Hi 👋, I'm" />
+                            <input type="text" name="currently-work" id="currently-work" class="field"
+                                value="My Blog, Github Project" placeholder="project name" />
+                            <input type="url" name="current-project-link" id="current-project-link" class="field"
+                                value="" placeholder="project link" />
+                            <br />
+                        </div>
+                        <div class="sub-block">
+                            <input type="text" name="looking-to-prefix" id="looking-to-prefix" class="prefix-field"
+                                value="👯 I’m looking to collaborate on" />
+                            <input type="text" name="looking-to" id="looking-to" class="field"
+                                value="Projects,Tech Articles" />
+                            <input type="url" name="looking-to-link" id="current-project-link" class="field" value="" />
+                            <br />
+                        </div>
+                        <div class="sub-block">
+                            <input type="text" name="looking-for-prefix" id="looking-for-prefix" class="prefix-field"
+                                value="🤝 I’m looking for help with" />
+                            <input type="text" name="looking-for" id="looking-for" class="field" value="" />
+                            <input type="url" name="current-project-link" id="current-project-link" class="field"
+                                value="" />
+                            <br />
+                        </div>
+                        <div class="sub-block">
+                            <input type="text" name="currently-learning-prefix" id="currently-learning-prefix"
+                                class="prefix-field" value="🌱 I’m currently learning" />
+                            <input type="text" name="currently-learning" id="currently-learning" class="field"
+                                value="Data Science,AWS,Data Engineering" />
+                            <br />
+                        </div>
+                        <div class="sub-block">
+                            <input type="text" name="ask-me-prefix" id="ask-me-prefix" class="prefix-field"
+                                value="💬 Ask me about" />
+                            <input type="text" name="ask-me" id="ask-me" class="field"
+                                value="Python, JavaScript, Freelancing Opportunites, Open Source" />
+                            <br />
+                        </div>
+                        <div class="sub-block">
+                            <input type="text" name="reach-me-prefix" id="reach-me-prefix" class="prefix-field"
+                                value="📫 How to reach me" />
+                            <input type="email" name="reach-me" id="reach-me" class="field" value="" />
+                            <br />
+                        </div>
+                        <div class="sub-block">
+                            <input type="text" name="my-project-prefix" id="my-project-prefix" class="prefix-field"
+                                value="👨‍💻 All of my projects are available at" />
+                            <input type="url" name="my-project" id="my-project" class="field" value="" />
+                            <br />
+                        </div>
+                        <div class="sub-block">
+                            <input type="text" name="blog-prefix" id="blog-prefix" class="prefix-field"
+                                value="📝 I regularly write articles on" />
+                            <input type="url" name="blog" id="blog" class="field" value="" />
+                            <br />
+                        </div>
+                        <div class="sub-block">
+                            <input type="text" name="my-experience-prefix" id="my-experience-prefix"
+                                class="prefix-field" value="📄 Know about my experiences" />
+                            <input type="url" name="my-experience" id="my-experience" class="field" value="" />
+                            <br />
+                        </div>
+                        <div class="sub-block">
+                            <input type="text" name="fun-fact-prefix" id="fun-fact-prefix" class="prefix-field"
+                                value="⚡ Fun fact" />
+                            <input type="text" name="fun-fact" id="fun-fact" class="field" value="" />
+                            <br />
+                        </div>
+                    </div>
                 </div>
-                <div class="sub-block">
-                    <input type="text" name="currently-learning-prefix" id="currently-learning-prefix"
-                        class="prefix-field" value="🌱 I’m currently learning" />
-                    <input type="text" name="currently-learning" id="currently-learning" class="field"
-                        value="Data Science,AWS,Data Engineering" />
-                    <br />
+                <div class="third content" id="third">
+                    <div class="block skills">
+                        <h2>Skills <input type="search" name="skills" id="skills" class="search"
+                                placeholder="Search Skills" />
+                        </h2>
+                        <div class="sub-block">
+                            <h3>Programming Languages</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Frontend Development</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Backend Development</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Mobile App Development</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>AI/ML</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Database</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Data Visualization</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Devops</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Backend as a Service(BaaS)</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Framework</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Testing</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Software</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Static Site Generators</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Game Engines</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Automation</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                        <div class="sub-block">
+                            <h3>Other</h3>
+                            <hr>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                            <input type="checkbox" name="" id="" class="skill-checkbox">
+                            <label for="" class="skill-label"></label>
+                        </div>
+                    </div>
                 </div>
-                <div class="sub-block">
-                    <input type="text" name="ask-me-prefix" id="ask-me-prefix" class="prefix-field"
-                        value="💬 Ask me about" />
-                    <input type="text" name="ask-me" id="ask-me" class="field"
-                        value="Python, JavaScript, Freelancing Opportunites, Open Source" />
-                    <br />
-                </div>
-                <div class="sub-block">
-                    <input type="text" name="reach-me-prefix" id="reach-me-prefix" class="prefix-field"
-                        value="📫 How to reach me" />
-                    <input type="email" name="reach-me" id="reach-me" class="field" value="" />
-                    <br />
-                </div>
-                <div class="sub-block">
-                    <input type="text" name="my-project-prefix" id="my-project-prefix" class="prefix-field"
-                        value="👨‍💻 All of my projects are available at" />
-                    <input type="url" name="my-project" id="my-project" class="field" value="" />
-                    <br />
-                </div>
-                <div class="sub-block">
-                    <input type="text" name="blog-prefix" id="blog-prefix" class="prefix-field"
-                        value="📝 I regularly write articles on" />
-                    <input type="url" name="blog" id="blog" class="field" value="" />
-                    <br />
-                </div>
-                <div class="sub-block">
-                    <input type="text" name="my-experience-prefix" id="my-experience-prefix" class="prefix-field"
-                        value="📄 Know about my experiences" />
-                    <input type="url" name="my-experience" id="my-experience" class="field" value="" />
-                    <br />
-                </div>
-                <div class="sub-block">
-                    <input type="text" name="fun-fact-prefix" id="fun-fact-prefix" class="prefix-field"
-                        value="⚡ Fun fact" />
-                    <input type="text" name="fun-fact" id="fun-fact" class="field" value="" />
-                    <br />
-                </div>
-            </div>
-            <div class="block skills">
-                <h2>Skills <input type="search" name="skills" id="skills" class="search" placeholder="Search Skills" />
-                </h2>
-                <div class="sub-block">
-                    <h3>Programming Languages</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Frontend Development</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Backend Development</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Mobile App Development</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>AI/ML</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Database</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Data Visualization</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Devops</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Backend as a Service(BaaS)</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Framework</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Testing</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Software</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Static Site Generators</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Game Engines</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Automation</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-                <div class="sub-block">
-                    <h3>Other</h3>
-                    <hr>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                    <input type="checkbox" name="" id="" class="skill-checkbox">
-                    <label for="" class="skill-label"></label>
-                </div>
-            </div>
-            <div class="block social">
+                <div class="fourth content" id="fourth">
+                    <div class="block social">
 
-                <h2>Social</h2>
-                <div class="sub-block social required">
-                    <div class="social-sub-block">
-                        <label for="github-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/github.svg" alt="github"
-                                class="social-icon" /></label>
-                        <input type="text" name="github-username" class="social-username" id="github-username"
-                            value="akshat-jjain" required oninput="add_ons('github')">
+                        <h2>Social</h2>
+                        <div class="sub-block social required">
+                            <div class="social-sub-block">
+                                <label for="github-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/github.svg"
+                                        alt="github" class="social-icon" /></label>
+                                <input type="text" name="github-username" class="social-username" id="github-username"
+                                    value="akshat-jjain" required oninput="add_ons('github')">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="wakatime-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/wakatime.svg"
+                                        alt="wakatime" class="social-icon" /></label>
+                                <input type="text" name="wakatime-username" class="social-username"
+                                    id="wakatime-username" value="akshat_jain" oninput="add_ons('wakatime')">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="twitter-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/twitter.svg"
+                                        alt="twitter" class="social-icon" /></label>
+                                <input type="text" name="twitter-username" class="social-username" id="twitter-username"
+                                    value="" oninput="add_ons('twitter')">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="dev-usame"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/devdotto.svg"
+                                        alt="dev" class="social-icon" /></label>
+                                <input type="text" name="dev-username" class="social-username" id="dev-username"
+                                    value="" oninput="add_ons('dev')">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="codepen-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/codepen.svg"
+                                        alt="codepen" class="social-icon" /></label>
+                                <input type="text" name="codepen-username" class="social-username" id="codepen-username"
+                                    value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="codesandbox-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/codesandbox.svg"
+                                        alt="codesandbox" class="social-icon" /></label>
+                                <input type="text" name="codesandbox-username" class="social-username"
+                                    id="codesandbox-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="stackoverflow-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/stackoverflow.svg"
+                                        alt="stackoverflow" class="social-icon" /></label>
+                                <input type="text" name="stackoverflow-username" class="social-username"
+                                    id="stackoverflow-username" value="" oninput="add_ons('stackoverflow')">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="linkedin-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/linkedin.svg"
+                                        alt="linkedin" class="social-icon" /></label>
+                                <input type="text" name="linkedin-username" class="social-username"
+                                    id="linkedin-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="kaggle-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/kaggle.svg"
+                                        alt="kaggle" class="social-icon" /></label>
+                                <input type="text" name="kaggle-username" class="social-username" id="kaggle-username"
+                                    value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="facebook-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/facebook.svg"
+                                        alt="facebook" class="social-icon" /></label>
+                                <input type="text" name="facebook-username" class="social-username"
+                                    id="facebook-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="instagram-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/instagram.svg"
+                                        alt="instagram" class="social-icon" /></label>
+                                <input type="text" name="instagram-username" class="social-username"
+                                    id="instagram-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="dribbble-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/dribbble.svg"
+                                        alt="dribbble" class="social-icon" /></label>
+                                <input type="text" name="dribbble-username" class="social-username"
+                                    id="dribbble-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="behance-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/behance.svg"
+                                        alt="behance" class="social-icon" /></label>
+                                <input type="text" name="behance-username" class="social-username" id="behance-username"
+                                    value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="medium-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/medium.svg"
+                                        alt="medium" class="social-icon" /></label>
+                                <input type="text" name="medium-username" class="social-username" id="medium-username"
+                                    value="" oninput="add_ons('medium')">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="youtube-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/youtube.svg"
+                                        alt="youtube" class="social-icon" /></label>
+                                <input type="text" name="youtube-username" class="social-username" id="youtube-username"
+                                    value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="codechef-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/codechef.svg"
+                                        alt="codechef" class="social-icon" /></label>
+                                <input type="text" name="codechef-username" class="social-username"
+                                    id="codechef-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="hackerrank-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/hackerrank.svg"
+                                        alt="hackerrank" class="social-icon" /></label>
+                                <input type="text" name="hackerrank-username" class="social-username"
+                                    id="hackerrank-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="codeforces-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/codeforces.svg"
+                                        alt="codeforces" class="social-icon" /></label>
+                                <input type="text" name="codeforces-username" class="social-username"
+                                    id="codeforces-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="leetcode-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/leetcode.svg"
+                                        alt="leetcode" class="social-icon" /></label>
+                                <input type="text" name="leetcode-username" class="social-username"
+                                    id="leetcode-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="topcoder-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/topcoder.svg"
+                                        alt="topcoder" class="social-icon" /></label>
+                                <input type="text" name="topcoder-username" class="social-username"
+                                    id="topcoder-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="hackerearth-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/hackerearth.svg"
+                                        alt="hackerearth" class="social-icon" /></label>
+                                <input type="text" name="hackerearth-username" class="social-username"
+                                    id="hackerearth-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="geeksforgeeks-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/geeksforgeeks.svg"
+                                        alt="geeksforgeeks" class="social-icon" /></label>
+                                <input type="text" name="geeksforgeeks-username" class="social-username"
+                                    id="geeksforgeeks-username" value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="discord-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/discord.svg"
+                                        alt="discord" class="social-icon" /></label>
+                                <input type="text" name="discord-username" class="social-username" id="discord-username"
+                                    value="">
+                            </div>
+                            <div class="social-sub-block">
+                                <label for="rss-username"><img
+                                        src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/rss.svg" alt="rss"
+                                        class="social-icon" /></label>
+                                <input type="text" name="rss-username" class="social-username" id="rss-username"
+                                    value="" oninput="add_ons('rss')">
+                            </div>
+                        </div>
                     </div>
-                    <div class="social-sub-block">
-                        <label for="wakatime-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/wakatime.svg" alt="wakatime"
-                                class="social-icon" /></label>
-                        <input type="text" name="wakatime-username" class="social-username" id="wakatime-username"
-                            value="akshat_jain" oninput="add_ons('wakatime')">
+                    <div class="block add-ons-block">
+                        <h2>Add-ons</h2>
+                        <div class="sub-block add-ons">
+                            <div data-name="joke">
+                                <input type="checkbox" name="joke-card" id="joke-card" onchange="generate()" />
+                                <label for="visitors-count">display joke card</label><br>
+                            </div>
+                            <div data-name="github">
+                                <input type="checkbox" name="visitors-count" id="visitors-count"
+                                    onchange="generate()" />
+                                <label for="visitors-count">display visitors count badge</label><br>
+                            </div>
+                            <div data-name="github">
+                                <input type="checkbox" name="github-trophy" id="github-trophy" onchange="generate()" />
+                                <label for="github-trophy">display github trophy</label><br>
+                            </div>
+                            <div data-name="github">
+                                <input type="checkbox" name="activity-graph" id="activity-graph"
+                                    onchange="generate()" />
+                                <label for="activity-graph">display activity graph</label><br>
+                            </div>
+                            <div data-name="github">
+                                <input type="checkbox" name="github-metrices" id="github-metrices"
+                                    onchange="generate()" />
+                                <label for="github-metrices">display github metrices</label><br>
+                            </div>
+                            <div data-name="github">
+                                <input type="checkbox" name="github-stats" id="github-stats" onchange="generate()" />
+                                <label for="github-stats">display github profile stats card</label><br>
+                            </div>
+                            <div data-name="github">
+                                <input type="checkbox" name="top-skills" id="top-skills" onchange="generate()" />
+                                <label for="top-skills">display top skills</label><br>
+                            </div>
+                            <div data-name="github">
+                                <input type="checkbox" name="github-streak" id="github-streak" onchange="generate()" />
+                                <label for="github-streak">display github streak stats</label><br>
+                            </div>
+                            <div data-name="wakatime">
+                                <input type="checkbox" name="wakatime-stats" id="wakatime-stats"
+                                    onchange="generate()" />
+                                <label for="wakatime-stats">display wakatime stats</label><br>
+                            </div>
+                            <div data-name="twitter">
+                                <input type="checkbox" name="twitter-badge" id="twitter-badge" onchange="generate()" />
+                                <label for="twitter-badge">display twitter badge</label><br>
+                            </div>
+                            <div data-name="dev">
+                                <input type="checkbox" name="dev-blog" id="dev-blog" onchange="generate()" />
+                                <label for="dev-blog">display latest dev.to blogs dynamically (GitHub
+                                    Action)</label><br>
+                            </div>
+                            <div data-name="medium">
+                                <input type="checkbox" name="medium-blog" id="medium-blog" onchange="generate()" />
+                                <label for="medium-blog">display latest medium blogs dynamically (GitHub
+                                    Action)</label><br>
+                            </div>
+                            <div data-name="stackoverflow">
+                                <input type="checkbox" name="stackoverflow-stats" id="stackoverflow-stats"
+                                    onchange="generate()" />
+                                <label for="stackoverflow-stats">display stackoverflow stats</label><br>
+                            </div>
+                            <div data-name="rss">
+                                <input type="checkbox" name="personal-blog" id="personal-blog" onchange="generate()" />
+                                <label for="personal-blog">display latest blogs from your personal blog dynamically
+                                    (GitHub Action)</label><br>
+                            </div>
+                            <label class="none">blog-post-workflow.yml file(learn how to setup)</label>
+                        </div>
                     </div>
-                    <div class="social-sub-block">
-                        <label for="twitter-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/twitter.svg" alt="twitter"
-                                class="social-icon" /></label>
-                        <input type="text" name="twitter-username" class="social-username" id="twitter-username"
-                            value="" oninput="add_ons('twitter')">
+                    <div class="block support">
+                        <h2>Support</h2>
+                        <label for="support"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                                class="support-img" alt="support"></label>
+                        <input type="text" class="field" id="support" name="support">
                     </div>
-                    <div class="social-sub-block">
-                        <label for="dev-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/devdotto.svg" alt="dev"
-                                class="social-icon" /></label>
-                        <input type="text" name="dev-username" class="social-username" id="dev-username" value="" oninput="add_ons('dev')">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="codepen-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/codepen.svg" alt="codepen"
-                                class="social-icon" /></label>
-                        <input type="text" name="codepen-username" class="social-username" id="codepen-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="codesandbox-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/codesandbox.svg"
-                                alt="codesandbox" class="social-icon" /></label>
-                        <input type="text" name="codesandbox-username" class="social-username" id="codesandbox-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="stackoverflow-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/stackoverflow.svg"
-                                alt="stackoverflow" class="social-icon" /></label>
-                        <input type="text" name="stackoverflow-username" class="social-username"
-                            id="stackoverflow-username" value="" oninput="add_ons('stackoverflow')">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="linkedin-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/linkedin.svg" alt="linkedin"
-                                class="social-icon" /></label>
-                        <input type="text" name="linkedin-username" class="social-username" id="linkedin-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="kaggle-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/kaggle.svg" alt="kaggle"
-                                class="social-icon" /></label>
-                        <input type="text" name="kaggle-username" class="social-username" id="kaggle-username" value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="facebook-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/facebook.svg" alt="facebook"
-                                class="social-icon" /></label>
-                        <input type="text" name="facebook-username" class="social-username" id="facebook-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="instagram-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/instagram.svg"
-                                alt="instagram" class="social-icon" /></label>
-                        <input type="text" name="instagram-username" class="social-username" id="instagram-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="dribbble-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/dribbble.svg" alt="dribbble"
-                                class="social-icon" /></label>
-                        <input type="text" name="dribbble-username" class="social-username" id="dribbble-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="behance-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/behance.svg" alt="behance"
-                                class="social-icon" /></label>
-                        <input type="text" name="behance-username" class="social-username" id="behance-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="medium-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/medium.svg" alt="medium"
-                                class="social-icon" /></label>
-                        <input type="text" name="medium-username" class="social-username" id="medium-username" value="" oninput="add_ons('medium')">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="youtube-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/youtube.svg" alt="youtube"
-                                class="social-icon" /></label>
-                        <input type="text" name="youtube-username" class="social-username" id="youtube-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="codechef-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/codechef.svg" alt="codechef"
-                                class="social-icon" /></label>
-                        <input type="text" name="codechef-username" class="social-username" id="codechef-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="hackerrank-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/hackerrank.svg"
-                                alt="hackerrank" class="social-icon" /></label>
-                        <input type="text" name="hackerrank-username" class="social-username" id="hackerrank-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="codeforces-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/codeforces.svg"
-                                alt="codeforces" class="social-icon" /></label>
-                        <input type="text" name="codeforces-username" class="social-username" id="codeforces-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="leetcode-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/leetcode.svg" alt="leetcode"
-                                class="social-icon" /></label>
-                        <input type="text" name="leetcode-username" class="social-username" id="leetcode-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="topcoder-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/topcoder.svg" alt="topcoder"
-                                class="social-icon" /></label>
-                        <input type="text" name="topcoder-username" class="social-username" id="topcoder-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="hackerearth-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/hackerearth.svg"
-                                alt="hackerearth" class="social-icon" /></label>
-                        <input type="text" name="hackerearth-username" class="social-username" id="hackerearth-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="geeksforgeeks-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/geeksforgeeks.svg"
-                                alt="geeksforgeeks" class="social-icon" /></label>
-                        <input type="text" name="geeksforgeeks-username" class="social-username"
-                            id="geeksforgeeks-username" value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="discord-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/discord.svg" alt="discord"
-                                class="social-icon" /></label>
-                        <input type="text" name="discord-username" class="social-username" id="discord-username"
-                            value="">
-                    </div>
-                    <div class="social-sub-block">
-                        <label for="rss-username"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/rss.svg" alt="rss"
-                                class="social-icon" /></label>
-                        <input type="text" name="rss-username" class="social-username" id="rss-username" value="" oninput="add_ons('rss')">
-                    </div>
+                    <!-- <div class="block generate-container" id="generate">
+                        <button class="generate" type="submit" id="generate-btn">Generate Now</button>
+                    </div> -->
                 </div>
             </div>
-            <div class="block add-ons-block">
-                <h2>Add-ons</h2>
-                <div class="sub-block add-ons">
-                    <div data-name="github">
-                        <input type="checkbox" name="visitors-count" id="visitors-count" />
-                        <label for="visitors-count">display visitors count badge</label><br>
-                    </div>
-                    <div data-name="github">
-                        <input type="checkbox" name="github-trophy" id="github-trophy" />
-                        <label for="github-trophy">display github trophy</label><br>
-                    </div>
-                    <div data-name="github">
-                        <input type="checkbox" name="activity-graph" id="activity-graph" />
-                        <label for="activity-graph">display activity graph</label><br>
-                    </div>
-                    <div data-name="github">
-                        <input type="checkbox" name="github-metrices" id="github-metrices" />
-                        <label for="github-metrices">display github metrices</label><br>
-                    </div>
-                    <div data-name="github">
-                        <input type="checkbox" name="github-stats" id="github-stats" />
-                        <label for="github-stats">display github profile stats card</label><br>
-                    </div>
-                    <div data-name="github">
-                        <input type="checkbox" name="top-skills" id="top-skills" />
-                        <label for="top-skills">display top skills</label><br>
-                    </div>
-                    <div data-name="github">
-                        <input type="checkbox" name="github-streak" id="github-streak" />
-                        <label for="github-streak">display github streak stats</label><br>
-                    </div>
-                    <div data-name="wakatime">
-                        <input type="checkbox" name="wakatime-stats" id="wakatime-stats" />
-                        <label for="wakatime-stats">display wakatime stats</label><br>
-                    </div>
-                    <div data-name="twitter">
-                        <input type="checkbox" name="twitter-badge" id="twitter-badge" />
-                        <label for="twitter-badge">display twitter badge</label><br>
-                    </div>
-                    <div data-name="dev">
-                        <input type="checkbox" name="dev-blog" id="dev-blog" />
-                        <label for="dev-blog">display latest dev.to blogs dynamically (GitHub
-                            Action)</label><br>
-                    </div>
-                    <div data-name="medium">
-                        <input type="checkbox" name="medium-blog" id="medium-blog" />
-                        <label for="medium-blog">display latest medium blogs dynamically (GitHub
-                            Action)</label><br>
-                    </div>
-                    <div data-name="stackoverflow">
-                        <input type="checkbox" name="stackoverflow-stats" id="stackoverflow-stats" />
-                        <label for="stackoverflow-stats">display stackoverflow stats</label><br>
-                    </div>
-                    <div data-name="rss">
-                        <input type="checkbox" name="personal-blog" id="personal-blog" />
-                        <label for="personal-blog">display latest blogs from your personal blog dynamically
-                            (GitHub Action)</label><br>
-                    </div>
-                    <label class="none">blog-post-workflow.yml file(learn how to setup)</label>
+            <div class="output" id="output-container">
+                <div class="tab">
+                    <button class="output-tablinks" onclick="showCode(event, 'output')" id="preview">Preview</button>
+                    <button class="output-tablinks" onclick="showCode(event, 'md-code')" id="show-code">Show
+                        Code</button>
                 </div>
-            </div>
-            <div class="block support">
-                <h2>Support</h2>
-                <label for="support"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                        class="support-img" alt="support"></label>
-                <input type="text" class="field" id="support" name="support">
-            </div>
-            <div class="block generate-container" id="generate">
-                <button class="generate" type="submit" id="generate-btn">Generate Now</button>
-            </div>
-            <div class="output" id="output">
-
+                <div id="output" class="output-content" oncontextmenu="return false"></div>
+                <div id="md-code" class="output-content">
+                    <pre><code><textarea name="code" id="code-block" cols="30" rows="10" spellcheck="false" autocomplete="off">
+                    </textarea></code></pre>
+                    <div class="btn-container" id="btn-container">
+                        <button id="copy-code">Copy Code</button>
+                        <button id="download-code">Download Code</button>
+                    </div>
+                </div>
             </div>
         </div>
         <script data-name="BMC-Widget" data-cfasync="false"
