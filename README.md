@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-<a href="https://github.com/akshat-jjain/github-profile-readme-generator/blob/master/LICENSE" target="blank">
+<a href="https://github.com/akshat-jjain/github-profile-readme-generator/blob/main/LICENSE" target="blank">
 <img src="https://img.shields.io/github/license/akshat-jjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator license" />
 </a>
 <a href="https://github.com/akshat-jjain/github-profile-readme-generator/fork" target="blank">
