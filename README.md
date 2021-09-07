@@ -23,19 +23,16 @@
 <a href="https://github.com/akshat-jjain/github-profile-readme-generator/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/akshat-jjain/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator pull-requests"/>
 </a>
-<a href="https://discord.gg/HHMs7Eg" target="blank">
-<img src="https://img.shields.io/discord/735303195105951764?label=Join%20Community&logo=discord&style=flat-square" alt="join discord community of github profile readme generator"/>
-</a>
 </p>
 
 <p align="center"><img src="./src/images/github-profile-readme-generator.gif" alt="github-profile-readme-generator gif" /></p>
 
 <p align="center">
-    <a href="https://rahuldkjain.github.io/gh-profile-readme-generator" target="blank">View Demo</a>
+    <a href="https://akshat-jjain.github.io/github-profile-readme-generator" target="blank">View Demo</a>
     ·
-    <a href="https://github.com/rahuldkjain/github-profile-readme-generator/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/akshat-jjain/github-profile-readme-generator/issues/new/choose">Report Bug</a>
     ·
-    <a href="https://github.com/rahuldkjain/github-profile-readme-generator/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/akshat-jjain/github-profile-readme-generator/issues/new/choose">Request Feature</a>
 </p>
 
 <p align="center">
@@ -56,11 +53,11 @@ This tool provides an easy way to create a GitHub profile readme with the latest
 
 
 ## 🚀 Demo 
-<a href="https://rahuldkjain.github.io/gh-profile-readme-generator" target="blank">
-<img src="https://img.shields.io/website?url=https%3A%2F%2Frahuldkjain.github.io%2Fgh-profile-readme-generator&logo=github&style=flat-square" />
+<a href="https://akshat-jjain.github.io/github-profile-readme-generator" target="blank">
+<img src="https://img.shields.io/website?url=https%3A%2F%2Fakshat-jjain.github.io%2Fgithub-profile-readme-generator&logo=github&style=flat-square" />
 </a>
 
-Try the tool: [GitHub Profile README Generator](https://rahuldkjain.github.io/gh-profile-readme-generator)
+Try the tool: [GitHub Profile README Generator](https://akshat-jjain.github.io/github-profile-readme-generator)
 
 ## 🧐 Features
 
@@ -96,7 +93,7 @@ You can preview the README too.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/rahuldkjain/github-profile-readme-generator.git
+git clone https://github.com/akshat-jjain/github-profile-readme-generator.git
 ```
 
 2. Change the working directory
@@ -152,7 +149,7 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 <p align="left">
 <a href="https://www.paypal.me/rahuldkjain/10"><img src="https://ionicabizau.github.io/badges/paypal.svg" alt="sponsor github profile readme generator"/>
 </a>
-<a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Frahuldkjain.github.io%2Fgithub-profile-readme-generator">
+<a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fakshat-jjain.github.io%2Fgithub-profile-readme-generator">
 <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fakshat-jjain.github.io%2Fgithub-profile-readme-generator" alt="tweet github profile readme generator"/>
 </a>
 </p>
