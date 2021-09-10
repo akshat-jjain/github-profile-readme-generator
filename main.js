@@ -25,7 +25,7 @@ const generate = () => {
     const dev = (input_check('dev-username')) ? `<a href="https://dev.to/${$id('dev-username').value}" target="blank"><img align="center" src="${baseUrl}devdotto.svg" alt="${$id('dev-username').value}" height="30" width="40" /></a>` : "";
     const codepen = (input_check('codepen-username')) ? `<a href="https://codepen.io/${$id('codepen-username').value}" target="blank"><img align="center" src="${baseUrl}codepen.svg" alt="${$id('codepen-username').value}" height="30" width="40" /></a>` : "";
     const codesandbox = (input_check('codesandbox-username')) ? `<a href="https://codesandbox.com/${$id('codesandbox-username').value}" target="blank"><img align="center" src="${baseUrl}codesandbox.svg" alt="${$id('codesandbox-username').value}" height="30" width="40" /></a>` : "";
-    const stackoverflow = (input_check('stackoverflow-username')) ? `<a href="https://stackoverflow.com/users/${$id('stackoverflow-username').value}" target="blank"><img align="center" src="${baseUrl}stack-overflow.svg" alt="${$id('stackoverflow-username').value}" height="30" width="40" /></a>` : "";
+    const stackoverflow = (input_check('stackoverflow-username')) ? `<a href="https://stackoverflow.com/users/${$id('stackoverflow-username').value}" target="blank"><img align="center" src="${baseUrl}stackoverflow.svg" alt="${$id('stackoverflow-username').value}" height="30" width="40" /></a>` : "";
     const linkedin = (input_check('linkedin-username')) ? `<a href="https://linkedin.com/in/${$id('linkedin-username').value}" target="blank"><img align="center" src="${baseUrl}linked-in-alt.svg" alt="${$id('linkedin-username').value}" height="30" width="40" /></a>` : "";
     const kaggle = (input_check('kaggle-username')) ? `<a href="https://kaggle.com/${$id('kaggle-username').value}" target="blank"><img align="center" src="${baseUrl}kaggle.svg" alt="${$id('kaggle-username').value}" height="30" width="40" /></a>` : "";
     const facebook = (input_check('facebook-username')) ? `<a href="https://fb.com/${$id('facebook-username').value}" target="blank"><img align="center" src="${baseUrl}facebook.svg" alt="${$id('facebook-username').value}" height="30" width="40" /></a>` : "";
@@ -59,11 +59,29 @@ const generate = () => {
     const stackoverflow_stats = ($id('stackoverflow-stats').checked && input_check('stackoverflow-username')) ? `<h2 > My Stackoverflow Stats </h2>
     <p><img align="left" src="https://stackoverflow-card.vercel.app/?userID=${$id('stackoverflow-username').value}" alt="${$id('stackoverflow-username').value}" /></p>` : "";
     const joke_card = ($id('joke-card').checked) ? `<h2> Some Programming Humor for you <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width = '32px'></h2>
-    <p><img src="https://readme-jokes.vercel.app/api?theme=default" alt="Jokes Card"></p>` : "";
+    <p><img src="https://readme-jokes.vercel.app/api?theme=default" alt="Jokes Card" ></p>` : "";
 
     const blog_post = (($id('dev-blog').checked && input_check('dev-username')) || ($id('medium-blog').checked && input_check('medium-username')) || ($id('personal-blog').checked && input_check('rss-username'))) ? `<h3> Blogs posts </h3>
     <!-- BLOG-POST-LIST:START -->
     <!-- BLOG-POST-LIST:END -->` : "";
+
+    const blog_post_code = `name: Latest blog post workflow
+    on:
+      schedule:
+        # Runs every hour
+        - cron: "0 * * * *"
+    jobs:
+      update-readme-with-blog:
+        name: Update this repo's README with latest blog posts
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - uses: gautamkrishnar/blog-post-workflow@master
+            with:
+              comment_tag_name: "BLOG-POST-LIST"
+              commit_message: "Updated readme with the latest blog data"
+              feed_list: "https://dev.to/feed/${$id('dev-username').value}, https://medium.com/feed/${$id('medium-username').value},${$id('rss-username').value}" `;
+    const gitLink = `https://github.com/${github}/${github}/new/main?filename=.github/workflows/blog-post-new.yml&value=${blog_post_code}&message=Create%20blog-post-new.yml&description=Created%20for%20adding%20Latest%20blog%20on%20profile%20readme%20file`;
 
     $id('output').innerHTML = `${banner_image}${title}${subtitle}${visitors_count}${github_trophy}${twitter_badge}
     <h2> About Me <img src = "https://media0.giphy.com/media/KDDpcKigbfFpnejZs6/giphy.gif?cid=ecf05e47oy6f4zjs8g1qoiystc56cu7r9tb8a1fe76e05oty&rid=giphy.gif" width = 100px></h2>
@@ -73,16 +91,17 @@ const generate = () => {
     ${blog_post}
     <h2> Connect with me <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="100px"> </h2>
     <p align="left">
-    ${codepen}${dev}${twitter}${linkedin}${stackoverflow}${codesandbox}${kaggle}${facebook}${instagram}${dribbble}${behance}${medium}${youtube}${codechef}${hackerrank}${codeforces}${leetcode}${hackerearth}${geeksforgeeks}${topcoder}${rss}
+    ${codepen}${dev}${twitter}${linkedin}${stackoverflow}${codesandbox}${kaggle}${facebook}${instagram}${dribbble}${behance}${medium}${youtube}${codechef}${hackerrank}${codeforces}${leetcode}${hackerearth}${geeksforgeeks}${topcoder}${discord}${rss}
     </p>
     
     <h2> Skills <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = 32px> </h2>
     <p align="left"> <a href="https://developer.android.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://aws.amazon.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://heroku.com" target="_blank"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://kotlinlang.org" target="_blank"> <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="40" height="40"/> </a> <a href="https://kubernetes.io" target="_blank"> <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://opencv.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> </p>
     ${support}
     <h2> My GitHub Stats <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='32px'> </h2>
-    ${top_skills}${github_metrices}${github_stats}${github_streak}${activity_graph}${wakatime_stats}${joke_card}${stackoverflow_stats}
+    ${top_skills}${github_metrices}${github_stats}${github_streak}${activity_graph}${wakatime_stats}${stackoverflow_stats}${joke_card}
     `;
     $id('code-block').value = $id('output').innerHTML;
+    $id('upload-code').value = blog_post_code;
 }
 const $id = (id) => {
     return document.getElementById(id);
@@ -150,7 +169,7 @@ $id('copy-code').addEventListener("click", function () {
 });
 $id('download-code').addEventListener("click", function () {
     var ele = document.createElement("a");
-    ele.href = `data/txt;`;
+    ele.setAttribute('href', 'data:text/plain;charset=utf-8, ' + encodeURIComponent($id('code-block').value));
     ele.setAttribute("download", "README.md");
     ele.click();
     ele.remove();
