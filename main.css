@@ -13,7 +13,6 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-
     flex-wrap: wrap;
     align-items: flex-start;
 }
@@ -25,7 +24,13 @@
     margin: 1%;
     border: 1px solid #000;
     padding: 1%;
+    max-height: 150vh;
     height: auto;
+    overflow-y: scroll;
+}
+
+.container ::-webkit-scrollbar {
+    display: none;
 }
 
 .container .output {
@@ -166,12 +171,19 @@ img {
     background-color: #ccc;
 }
 
-textarea {
+#output textarea {
     resize: none;
     width: 100%;
     height: 100vh;
+    border-radius: 5px;
 }
 
+.blog-post-code textarea {
+    width: 100%;
+    resize: none;
+    border-radius: 5px;
+
+}
 
 @media (max-width:800px) {
     .container {
