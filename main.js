@@ -1,10 +1,13 @@
+let skill_dis = "";
 const generate = () => {
     const baseUrl = 'https://cdn.jsdelivr.net/npm/simple-icons@5.12.0/icons/';
     const title = (input_check('title-prefix') && input_check('title')) ? `<h1 align="center">${$id('title-prefix').value} ${$id('title').value}</h1>` : "";
 
     const subtitle = (input_check('subtitle')) ? `<h3 align="center">${$id('subtitle').value}</h3>` : "";
 
-    const banner_image = (input_check('banner-image')) ? `<div align="center"><img width="100%" height = "250px" src="${$id('banner-image').value}" alt="cover" /></div>` : "";
+    const banner_image = (input_check('banner-image')) ? `<div align="center">
+    <img width="100%" height = "250px" src="${$id('banner-image').value}" alt="cover" />
+</div>` : "";
     const about_image = (input_check('about-image')) ? `<img width="55%" align="right" alt="Github" src="${$id('about-image').value}" />` : "";
 
     const currently_work = (input_check('currently-work-prefix') && input_check('currently-work')) ? `<li>${$id('currently-work-prefix').value} <strong>${$id('currently-work').value}</strong></li>` : "";
@@ -82,8 +85,16 @@ const generate = () => {
               commit_message: "Updated readme with the latest blog data"
               feed_list: "https://dev.to/feed/${$id('dev-username').value}, https://medium.com/feed/${$id('medium-username').value},${$id('rss-username').value}" `;
     const gitLink = `https://github.com/${github}/${github}/new/main?filename=.github/workflows/blog-post-new.yml&value=${blog_post_code}&message=Create%20blog-post-new.yml&description=Created%20for%20adding%20Latest%20blog%20on%20profile%20readme%20file`;
+    skill_dis = "";
+    for (let index = 0; index < categorizedSkills.length; index++) {
+        for (let i = 0; i < categorizedSkills[index].skills.length; i++) {
+            check_skill(categorizedSkills[index].skills[i]);
+        }
+    }
 
-    $id('output').innerHTML = `${banner_image}${title}${subtitle}${visitors_count}${github_trophy}${twitter_badge}
+    $id('output').innerHTML = `${banner_image}
+${title}
+${subtitle}${visitors_count}${github_trophy}${twitter_badge}
     <h2> About Me <img src = "https://media0.giphy.com/media/KDDpcKigbfFpnejZs6/giphy.gif?cid=ecf05e47oy6f4zjs8g1qoiystc56cu7r9tb8a1fe76e05oty&rid=giphy.gif" width = 100px></h2>
     ${about_image}
     <ul>${currently_work}${currently_learning}${looking_to}${looking_for}${my_project}${blog}${ask_me}${reach_me}${my_experience}${fun_fact}
@@ -95,12 +106,13 @@ const generate = () => {
     </p>
     
     <h2> Skills <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = 32px> </h2>
-    <p align="left"> <a href="https://developer.android.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://aws.amazon.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://heroku.com" target="_blank"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://kotlinlang.org" target="_blank"> <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="40" height="40"/> </a> <a href="https://kubernetes.io" target="_blank"> <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://opencv.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> </p>
+    <p align="left">${skill_dis}</p>
     ${support}
     <h2> My GitHub Stats <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='32px'> </h2>
     ${top_skills}${github_metrices}${github_stats}${github_streak}${activity_graph}${wakatime_stats}${stackoverflow_stats}${joke_card}
     `;
-    $id('code-block').value = $id('output').innerHTML;
+    let md = ($id('output').innerHTML).replaceAll('<li>','- ').replaceAll('</li>','').replaceAll('<strong>',' **').replaceAll('</strong>','** ').replaceAll('<ul>','').replaceAll('</ul>','');
+    $id('code-block').value = md;
     $id('upload-code').value = blog_post_code;
 }
 const $id = (id) => {
@@ -169,9 +181,28 @@ $id('copy-code').addEventListener("click", function () {
 });
 $id('download-code').addEventListener("click", function () {
     var ele = document.createElement("a");
-    ele.setAttribute('href', 'data:text/plain;charset=utf-8, ' + encodeURIComponent($id('code-block').value));
+    ele.setAttribute('href', 'data:text/markdown;charset=utf-8, ' + encodeURIComponent($id('code-block').value));
     ele.setAttribute("download", "README.md");
     ele.click();
     ele.remove();
 });
+const check_skill = (skillId) => {
+    skill_dis += ($id(skillId).checked) ? `<a href="${skillWebsites[skillId]}" target="_blank"> <img src="${icons[skillId]}" alt="${skillId}" width="40" height="40"/> </a> ` : "";
+}
+const skills_list = () => {
+    $id('skills-add').innerHTML = ``;
+    let val = "";
+    console.log(categorizedSkills);
+    for (let index = 0; index < categorizedSkills.length; index++) {
+        val = `<div class="sub-block"><h3>${categorizedSkills[index].title}</h3><hr>`;
+        for (let i = 0; i < categorizedSkills[index].skills.length; i++) {
+            val += `<input type="checkbox" name="${categorizedSkills[index].skills[i]}" id="${categorizedSkills[index].skills[i]}" class="skill-checkbox" onchange="generate()">
+            <label for="${categorizedSkills[index].skills[i]}" class="skill-label">
+            <img src="${icons[categorizedSkills[index].skills[i]]}" alt="${categorizedSkills[index].skills[i]}" width="40px" height="30px" />
+            </label>`;
+        }
+        $id('skills-add').innerHTML += `${val}</div>`;
+    }
+}
+skills_list();
 generate();
