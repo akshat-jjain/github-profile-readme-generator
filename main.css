@@ -171,11 +171,12 @@ img {
     background-color: #ccc;
 }
 
-#output textarea {
+#md-code textarea {
     resize: none;
     width: 100%;
     height: 100vh;
     border-radius: 5px;
+    padding: 1%;
 }
 
 .blog-post-code textarea {
@@ -195,7 +196,6 @@ img {
     .container .output {
         width: 100%;
         height: auto;
-        overflow: hidden;
     }
 
     .container .output {
