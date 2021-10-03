@@ -129,6 +129,6 @@
         "name": "",
         "icon": "",
         "url": "https://",
-        "required": false
+        "required": true
     }
 ]
